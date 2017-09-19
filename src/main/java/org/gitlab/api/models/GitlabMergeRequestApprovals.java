@@ -1,146 +1,149 @@
 package org.gitlab.api.models;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GitlabMergeRequestApprovals {
-    public static final String URL = "/approvals";
 
-    private Integer id;
-    private Integer iid;
-    @JsonProperty("project_id")
-    private Integer projectId;
-    private String title;
-    private String description;
-    private String state;
+	public static final String URL = "/approvals";
 
-    @JsonProperty("updated_at")
-    private Date updatedAt;
+	private Integer id;
 
-    @JsonProperty("created_at")
-    private Date createdAt;
+	private Integer iid;
 
-    @JsonProperty("merge_status")
-    private String mergeStatus;
-    
-    @JsonProperty("approvals_required")
-    private Integer approvalsRequired;
+	@JsonProperty("project_id")
+	private Integer projectId;
 
-    @JsonProperty("approvals_left")
-    private Integer approvalsLeft;
+	private String title;
 
-    @JsonProperty("approved_by")
-    private List<GitlabApprovedBy> approvedBy;
+	private String description;
 
-    @JsonProperty("suggested_approvers")
-    private List<GitlabUser> suggestedApprovers;
+	private String state;
 
+	@JsonProperty("updated_at")
+	private Date updatedAt;
 
-    public Integer getId() {
-        return id;
-    }
+	@JsonProperty("created_at")
+	private Date createdAt;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	@JsonProperty("merge_status")
+	private String mergeStatus;
 
-    public Integer getIid() {
-        return iid;
-    }
+	@JsonProperty("approvals_required")
+	private Integer approvalsRequired;
 
-    public void setIid(Integer iid) {
-        this.iid = iid;
-    }
+	@JsonProperty("approvals_left")
+	private Integer approvalsLeft;
 
-    public Integer getProjectId() {
-        return projectId;
-    }
+	@JsonProperty("approved_by")
+	private List<GitlabApprovedBy> approvedBy;
 
-    public void setProjectId(Integer projectId) {
-        this.projectId = projectId;
-    }
+	@JsonProperty("suggested_approvers")
+	private List<GitlabUser> suggestedApprovers;
 
-    public String getTitle() {
-        return title;
-    }
+	public Integer getId() {
+		return id;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public Integer getIid() {
+		return iid;
+	}
 
-    public void setDescription(String d) {
-        description = d;
-    }
+	public void setIid(Integer iid) {
+		this.iid = iid;
+	}
 
-    public String getState() {
-        return state;
-    }
+	public Integer getProjectId() {
+		return projectId;
+	}
 
-    public void setState(String state) {
-        this.state = state;
-    }
+	public void setProjectId(Integer projectId) {
+		this.projectId = projectId;
+	}
 
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
+	public void setDescription(String d) {
+		description = d;
+	}
 
-    public String getMergeStatus() {
-        return mergeStatus;
-    }
+	public String getState() {
+		return state;
+	}
 
-    public void setMergeStatus(String mergeStatus) {
-        this.mergeStatus = mergeStatus;
-    }
+	public void setState(String state) {
+		this.state = state;
+	}
 
-    public Integer getApprovalsRequired() {
-        return approvalsRequired;
-    }
+	public Date getUpdatedAt() {
+		return updatedAt;
+	}
 
-    public void setApprovalsRequired(Integer approvalsRequired) {
-        this.approvalsRequired = approvalsRequired;
-    }
-    
-    public Integer getApprovalsLeft() {
-        return approvalsLeft;
-    }
+	public void setUpdatedAt(Date updatedAt) {
+		this.updatedAt = updatedAt;
+	}
 
-    public void setApprovalsLeft(Integer approvalsLeft) {
-        this.approvalsLeft = approvalsLeft;
-    }
+	public Date getCreatedAt() {
+		return createdAt;
+	}
 
-    public List<GitlabApprovedBy> getApprovedBy() {
-        return approvedBy;
-    }
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
+	}
 
-    public void setApprovedBy(List<GitlabApprovedBy> approvedBy) {
-        this.approvedBy = approvedBy;
-    }
-    
-    public List<GitlabUser> getSuggestedApprovers() {
-        return suggestedApprovers;
-    }
+	public String getMergeStatus() {
+		return mergeStatus;
+	}
 
-    public void setSuggestedApprovers(List<GitlabUser> suggestedApprovers) {
-        this.suggestedApprovers = suggestedApprovers;
-    }
+	public void setMergeStatus(String mergeStatus) {
+		this.mergeStatus = mergeStatus;
+	}
+
+	public Integer getApprovalsRequired() {
+		return approvalsRequired;
+	}
+
+	public void setApprovalsRequired(Integer approvalsRequired) {
+		this.approvalsRequired = approvalsRequired;
+	}
+
+	public Integer getApprovalsLeft() {
+		return approvalsLeft;
+	}
+
+	public void setApprovalsLeft(Integer approvalsLeft) {
+		this.approvalsLeft = approvalsLeft;
+	}
+
+	public List<GitlabApprovedBy> getApprovedBy() {
+		return approvedBy;
+	}
+
+	public void setApprovedBy(List<GitlabApprovedBy> approvedBy) {
+		this.approvedBy = approvedBy;
+	}
+
+	public List<GitlabUser> getSuggestedApprovers() {
+		return suggestedApprovers;
+	}
+
+	public void setSuggestedApprovers(List<GitlabUser> suggestedApprovers) {
+		this.suggestedApprovers = suggestedApprovers;
+	}
 }
